@@ -1,0 +1,101 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.nav-links {
+  display: flex; /* Flexbox */
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Main Layout using CSS Grid */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* content + sidebar */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Content Area */
+.content {
+  background: #f4f4f4;
+  padding: 1rem;
+}
+
+.cards {
+  display: flex; /* Flexbox for cards */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #ddd;
+  padding: 1rem;
+  flex: 1;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #eee;
+  padding: 1rem;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr; /* Stack content and sidebar */
+  }
+
+  .cards {
+    flex-direction: column; /* Stack cards vertically */
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  header {
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
